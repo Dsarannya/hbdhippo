@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Aircraft</title>
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400&display=swap" rel="stylesheet"> 
+        <style>
+            body{
+                background-image: url('plane.png');
+                background-size: cover;
+                background-position: top;
+                
+            }
+            .popup {
+    position: absolute;
+    left: 800px;
+    top: 5px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 350px;
+    background-color:whitesmoke !important;
+    color:black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -80px;
+    
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 30%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:transparent transparent whitesmoke transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  .cloud1{
+    position: fixed;
+    left: 100px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+    }
+  .cloud2{
+    position: absolute;
+    right: 400px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+  }
+  .light{
+    position: fixed;
+    left: 100px;
+    top: 5%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+  }
+  
+  /* The actual popup */
+   .popuptext1
+   {
+    visibility: hidden; 
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRsTlj5Qx-JFWUTpTSoZ6p7QTYiXwl-jbnU_g&usqp=CAU');
+    left: 430px;
+    top: 200px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    
+  }
+  .popuptext2
+   {
+    visibility: hidden; 
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRsTlj5Qx-JFWUTpTSoZ6p7QTYiXwl-jbnU_g&usqp=CAU');
+    right: 100px;
+    top: 300px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    
+  }
+  .popuptext3
+   {
+    visibility: hidden; 
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRsTlj5Qx-JFWUTpTSoZ6p7QTYiXwl-jbnU_g&usqp=CAU');
+    right: 450px;
+    top: 250px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    
+  }
+  
+  
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show
+  {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  .cloud1 .show,
+  .cloud2 .show,
+  .light .show
+  {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+            #cloud1{
+                position: absolute;
+                top: 0;
+                left: 100px;
+            }
+            #cloud2{
+                position: absolute;
+                top: 2px ;
+                left: 850px;
+                transform: scale(0.8);
+            }
+            #light{
+                position: absolute;
+                top: 500px;
+                left:50px ;
+                opacity: 0.8;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="popup" onclick="myFunction()">Yōkoso
+            <span class="popuptext" id="myPopup">
+                Good afternoon passengers. This is your captain speaking..<br>I'd like to welcome everyone on Rightwing Flight..<br>
+                it raining outside the window..<br>
+                If the weather cooperates we should get a great view of the city as we descend<br>
+                I'll talk to you again before we reach our destination. <br>Until then, sit back, relax and enjoy the rest of the flight..
+                
+            </span>
+       
+        </div>
+          <div class="all">
+              <div class="cloud1" onclick="myFunction1()" id="cloud1">
+                  <img src="cloud1.png" width="300px" height="250px" >
+                  <div class="popuptext1" id="myPopup1">
+                    <img src="kaku.png" style="width: 80px; height: 120px; float: left;">
+                    🎂🎊 झेप अशी घ्या की
+पाहणाऱ्यांच्या माना दुखाव्यात,<br>
+आकाशाला अशी गवसणी घाला की
+पक्ष्यांना प्रश्न पडावा,<br>
+ज्ञान असे मिळवं की,
+सागर अचंबित व्हावा....<br>
+इतकी प्रगती कर की
+काळही पहात राहावा<br>
+Happy bday Kshipra🎂🎊
+                    
+                  </div>
+              </div>
+              <div class="cloud2" onclick="myFunction2()" id="cloud2">
+                <img src="cloud1.png" >
+                <span class="popuptext2" id="myPopup2">
+                  <img src="ajoba.png" style="width: 100px; height: 120px; float: left;">
+                  मी माझ्या आजी -आजोबांची मनी🥰🥰<br>
+                  Happy Bday Kshipu☺️..
+                </span>
+            </div>
+            <div class="light" onclick="myFunction3()" id="light">
+                <img src="http://www.pngplay.com/wp-content/uploads/4/Lightning-Background-PNG-Image.png" width="400px" height="200px">
+                <span class="popuptext3" id="myPopup3">
+                  <img src="chotu.png"  style="float: left;; width: auto; height: 120px;" >
+                  वाढदिवसाच्या हार्दिक शुभेच्छा 🥳🥳 <br>चांगला अभ्यासू  कर आणि खूप  मोठी हो ☺️☺️    <br>
+                  _ तुझी मावशी 🥰🥰क्रांती<br>
+                    
+                    
+                </span>
+            </div>
+          </div>
+          <script>
+            // When the user clicks on div, open the popup
+            function myFunction() {
+              var popup = document.getElementById("myPopup");
+              popup.classList.toggle("show");
+            }
+            function myFunction1() {
+              var cloud1 = document.getElementById("myPopup1");
+              cloud1.classList.toggle("show");
+            }
+            function myFunction2() {
+              var cloud2 = document.getElementById("myPopup2");
+              cloud2.classList.toggle("show");
+            }
+            function myFunction3() {
+              var light = document.getElementById("myPopup3");
+              light.classList.toggle("show");
+            }
+            </script>
+    </body>
+</html>

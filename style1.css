@@ -1,0 +1,189 @@
+h1{
+    text-align: center;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: absolute;
+    left: 1100px;
+    top: 5px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Sansita Swashed', cursive;
+    
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 330px;
+    background-color:whitesmoke;
+    color:black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -80px;
+    
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 30%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:transparent transparent whitesmoke transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+.all{
+    display: flex;
+    height: 1550px;
+    width: 1557px;
+    margin-bottom: 2%;
+    
+}
+
+
+#plane{
+    position: absolute;
+    
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 100px;
+    -webkit-animation: movingplane 10s linear infinite;
+    -moz-animation: movingplane 10s linear infinite;
+    -o-animation: movingplane 10s linear infinite;
+    z-index: 1;
+}
+#mountain{
+    position: absolute;
+    top: 100px;
+    left: 0;
+   
+    
+
+}
+.bg{
+    position: absolute;
+    top:490px;
+    left: 1.8px;
+    
+}
+.sea{
+    position: absolute;
+    top:940px;
+    left: 1.8px;
+    z-index: 1;
+}
+#cruise{
+    position: absolute;
+    top:1070px;
+    left: 20px;
+    z-index: 1;
+    -webkit-animation: movingship 15s linear infinite;
+    opacity: 0.9;
+}
+
+#train{
+    position: absolute;
+    
+    background-repeat: no-repeat;
+    
+	z-index: 1;
+    -webkit-animation: movingtrain 10s linear infinite;
+}
+#island{
+    position: absolute;
+    top:1100px;
+    left: 86%;
+    z-index: 1;
+    
+}
+
+
+
+@keyframes movingplane {
+	0% { 
+        margin-left: 100%;
+        top:400px;
+    }
+    30% { 
+        margin-left: 35%; 
+        top: 200px; 
+        -webkit-transform: rotate(20deg);
+	    -moz-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+	    transform: rotate(20deg);
+    }
+    70%{
+        margin-left: 15%;
+        top: 100px;
+        transform: scale(0.9);
+    }
+    
+    100% {
+        margin-left: 5%;
+        top: 90px;
+        transform: scale(0.5);
+
+    }
+}
+@keyframes movingtrain {
+	0%{
+        left: 0%;
+        
+        top:83.3%;
+    }
+    
+
+    100%{
+        left: 100%;
+        
+        top: 83.3%;
+    }
+}
+@keyframes movingship {
+	0%{
+        left: 20px;
+        
+        top:1095px;
+    }
+    
+
+    100%{
+        left: 710px;
+        transform: scale(0.8);
+        top: 1070px;
+    }
+}
+

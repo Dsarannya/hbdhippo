@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Trekkkk</title>
+        <style>
+            body{
+                background-image: url('kalsubai.jpg');
+                background-size: cover;
+                background-position: top;
+            }
+            .popup {
+    position: absolute;
+    left: 800px;
+    top: 5px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 350px;
+    background-color:whitesmoke;
+    color:black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -80px;
+    
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 30%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:transparent transparent whitesmoke transparent;
+  }
+  .hippo{
+    position: fixed;
+    left: 100px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+    }
+    .rock{
+    position: fixed;
+    left: 100px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+    }
+    .tree{
+    position: fixed;
+    left: 100px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+    }
+  .popuptext1
+   {
+    visibility: hidden; 
+    background-image:url('data:image/jpeg;base64,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');
+    left: 430px;
+    top: 200px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.9;
+    
+  }
+  .popuptext2
+   {
+    visibility: hidden; 
+    background-image:url('data:image/jpeg;base64,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');
+    left: 430px;
+    top: 200px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.9;
+    
+  }
+  .popuptext3
+   {
+    visibility: hidden; 
+    background-image:url('data:image/jpeg;base64,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');
+    left: 430px;
+    top: 200px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.9;
+    
+  }
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  .hippo .show,
+  .rock .show,
+  .tree .show 
+  {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+            #hippo{
+               position: absolute;
+               top: 150px;
+               left: 1100px;
+               
+               opacity: 0.9;
+            }
+            #rock{
+                position: absolute;
+                top: 540px;
+                left: 0;
+                
+                opacity: 0.8;
+            }
+            #tree{
+                position: absolute;
+                top: 220px;
+                left: 300px;
+                opacity: 0.7;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="popup" onclick="myFunction()">Yōkoso
+            <span class="popuptext" id="myPopup">
+                Everest Of MAHARASHTRA...<br>
+                Trekking is all about nature.. rocks.. trees<br>
+                Njoy your trekkk!
+                
+            </span>
+       
+        </div>
+          <div class="all">
+              <div class="hippo" onclick="myFunction1()" id="hippo">
+                  <img src="hippo.png" style="transform: scale(0.3);"  >
+                  <div class="popuptext1" id="myPopup1">
+                    <img src="pm.png" style="width: 80px; height: 120px; float: left;">
+                    बाबांची डुबर्या 👆🥰🥰"मी माझ्या बाबाची झेरॉक्स काँपि " <br>
+                    वाढदिवसाच्या खुप खुप शुभेच्छा, आशिर्वाद 🙌🙌🙌🙌
+                    
+                  </div>
+              </div>
+              <div class="rock" onclick="myFunction2()" id="rock">
+                <img src="rock.png" style="transform: scale(0.5);">
+                <div class="popuptext2" id="myPopup2">
+                  <img src="kaka.png" style="width: 100px; height: 140px; float: left;">
+                  वर्षाचे 365 दिवस ..<br>
+महिन्याचे 30 दिवस ..<br>
+आठवड्याचे 7 दिवस..<br>
+ आणि माझा आवडता दिवस,<br>
+ तो म्हणजे तुझा
+ वाढदिवस !!<br>
+वाढदिवसाच्या खूप साऱ्या शुभेच्छा .
+                  
+                </div>
+            </div>
+            <div class="tree" onclick="myFunction3()" id="tree">
+                <img src="tree.png" width="90px" height="70px">
+                <div class="popuptext3" id="myPopup3">
+                  <img src="sd.png" style="width: 80px; height: 120px; float: left;">
+                  प्रभुआबांच्या शब्दात "अंबडचा चाऊस "...!!<br>
+मामाची लाडकी भाच्ची...!!!<br>
+चि.कु.क्षिप्रा उर्फ महि रावण..<br>
+हीस वाढदिवसाच्या हार्दिक हार्दिक शुभेच्छा..🙏🙏💐💐💐 व आशिर्वाद...✋.
+                   
+                  
+                </div>
+            </div>
+          </div>
+          <script>
+            // When the user clicks on div, open the popup
+            function myFunction() {
+              var popup = document.getElementById("myPopup");
+              popup.classList.toggle("show");
+            }
+            function myFunction1() {
+              var hippo = document.getElementById("myPopup1");
+              hippo.classList.toggle("show");
+            }
+            function myFunction2() {
+              var rock = document.getElementById("myPopup2");
+              rock.classList.toggle("show");
+            }
+            function myFunction3() {
+              var tree = document.getElementById("myPopup3");
+              tree.classList.toggle("show");
+            }
+            
+            
+            </script>
+    </body>
+</html>

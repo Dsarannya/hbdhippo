@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Andaman</title>
+       <style>
+           body{
+               background-image: url(island.png);
+               background-size:cover ;
+           }
+           .popup {
+    position: absolute;
+    left: 600px;
+    top: 5px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 350px;
+    background-color:whitesmoke;
+    color:black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -80px;
+    
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 30%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:transparent transparent whitesmoke transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  .gate{
+    position: fixed;
+    left: 100px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: larger;
+    
+    }
+    
+    .man{
+    position: fixed;
+    left: 100px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: larger;
+    
+    }
+    .popuptext1
+   {
+    visibility: hidden; 
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRsTlj5Qx-JFWUTpTSoZ6p7QTYiXwl-jbnU_g&usqp=CAU');
+    left: 430px;
+    top: 200px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    
+    
+  }
+  
+  
+  .popuptext4
+   {
+    visibility: hidden; 
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRsTlj5Qx-JFWUTpTSoZ6p7QTYiXwl-jbnU_g&usqp=CAU');
+    left: 430px;
+    top: 200px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    
+  }
+  
+  .gate .show,
+  
+  .man .show  
+  {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+           #gate{
+               position: absolute;
+               top: 268px;
+               left: 620px;
+               
+               opacity: 0.8;
+           }
+           
+           #man{
+               position: absolute;
+               top: 390px;
+               left: 430px;
+               opacity: 0.96;
+           }
+       </style>
+    </head>
+    <body>
+        <div class="popup" onclick="myFunction()">Yōkoso
+            <span class="popuptext" id="myPopup">
+              The Andaman and Nicobar Islands are today a picturesque place and a favourite with tourists.<br>
+              It has a very dark history of hundred years upto 1947..<br>
+              <b>Do not touch anything!</b>
+
+                
+            </span>
+       
+        </div>
+         <div class="all">
+             <div class="gate" onclick="myFunction1()" id="gate">
+                 <img src="https://img.traveltriangle.com/attachments/pictures/879263/original/Cellular_Jail_1.jpg?tr=w-1291,h-332" style="width: 190px; height: 60px; transform: rotate(-9deg);" >
+                 <div class="popuptext1" id="myPopup1">
+                    <img src="i1.jpeg" style="width: 150px; height: 100px;">
+                    aeeyyy bgha kiti masttt ahe ithe🤩🤩..
+                    
+                  </div>
+                </div>
+             
+            
+            
+            <div class="man" onclick="myFunction4()" id="man">
+                <img src="man.png" width="100px" height="50px" >
+                <div class="popuptext4" id="myPopup4">
+                  <img src="i2.jpeg" style="width: 150px; height: 120px;">
+                    bgha shantit..<br>arreeyy photo kdhe bgha..<br>
+                    ashi shiksha krt hote ithe bghitl ka🙂🥺..
+                  </div>
+            </div>
+         </div>
+         <script>
+            // When the user clicks on div, open the popup
+            function myFunction() {
+              var popup = document.getElementById("myPopup");
+              popup.classList.toggle("show");
+            }
+            function myFunction1() {
+              var gate = document.getElementById("myPopup1");
+              gate.classList.toggle("show");
+            }
+            
+            function myFunction4() {
+              var man = document.getElementById("myPopup4");
+              man.classList.toggle("show");
+            }
+            
+            </script>
+    </body>
+</html>

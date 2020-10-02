@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ship</title>
+        <style>
+           body{
+               background-image: url(1.jpeg);
+               background-size: cover;
+           }
+           .popup {
+    position: absolute;
+    left: 600px;
+    top: 5px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    background-color:whitesmoke;
+    color:black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -80px;
+    
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 20%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:transparent transparent whitesmoke transparent;
+  }
+  .bottle{
+    position: fixed;
+    left: 100px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+    }
+    .map{
+    position: fixed;
+    left: 100px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+    }
+    .rope{
+    position: fixed;
+    left: 100px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+    }
+    .chest{
+    position: fixed;
+    left: 100px;
+    top: 4%;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    
+    }
+    .popuptext1
+   {
+    visibility: hidden; 
+    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAD1BMVEX79ub////79uX9+vL79+lLhI2AAAAAfElEQVR4nO3SgQkDMAwDQSv2/jO30A0KIWDuJtCDKumpraaTypzXOy46k+rNgd/Err0X/dneBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA/+b1gOv6vF5w1enKbE48k0p671Gnkw+J8wBhrscTkwAAAABJRU5ErkJggg==');
+    left: 430px;
+    top: 200px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    
+  }
+  .popuptext2
+   {
+    visibility: hidden; 
+    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAD1BMVEX79ub////79uX9+vL79+lLhI2AAAAAfElEQVR4nO3SgQkDMAwDQSv2/jO30A0KIWDuJtCDKumpraaTypzXOy46k+rNgd/Err0X/dneBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA/+b1gOv6vF5w1enKbE48k0p671Gnkw+J8wBhrscTkwAAAABJRU5ErkJggg==');
+    left: 430px;
+    top: 200px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    
+  }
+  .popuptext3
+   {
+    visibility: hidden; 
+    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAD1BMVEX79ub////79uX9+vL79+lLhI2AAAAAfElEQVR4nO3SgQkDMAwDQSv2/jO30A0KIWDuJtCDKumpraaTypzXOy46k+rNgd/Err0X/dneBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA/+b1gOv6vF5w1enKbE48k0p671Gnkw+J8wBhrscTkwAAAABJRU5ErkJggg==');
+    left: 430px;
+    top: 200px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    
+  }
+  .popuptext4
+   {
+    visibility: hidden; 
+    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAD1BMVEX79ub////79uX9+vL79+lLhI2AAAAAfElEQVR4nO3SgQkDMAwDQSv2/jO30A0KIWDuJtCDKumpraaTypzXOy46k+rNgd/Err0X/dneBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA/+b1gOv6vF5w1enKbE48k0p671Gnkw+J8wBhrscTkwAAAABJRU5ErkJggg==');
+    left: 430px;
+    top: 200px;
+    width: 400px;
+    color:black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 2px;
+    position: fixed;
+    z-index: 1;
+    
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  .bottle .show,
+  .map .show,
+  .rope .show,
+  .chest .show 
+  {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+           #bottle{
+              position: absolute;
+              top:370px;
+              left: 1150px;
+              z-index: 1;
+              opacity: 0.8;
+              
+              
+           }
+           #map{
+               position: absolute;
+               top: 439px;
+               left: 380px;
+               opacity: 0.9;
+               
+           }
+           #rope{
+               position: absolute;
+               top: 670px;
+               left: 700px;
+               opacity: 0.7;
+           }
+           #chest{
+               position: absolute;
+               top: 440px;
+               left: 820px;
+               opacity: 0.95;
+               
+           }
+        </style>
+    </head>
+    <body>
+        <div class="popup" onclick="myFunction()">Yōkoso
+            <span class="popuptext" id="myPopup">
+                Ayy Ayy Captain!<br>
+                we need to find treasure <br>
+                Help us to find clues..
+                
+            </span>
+       
+        </div>
+        <div class="all">
+            <div class="bottle" onclick="myFunction1()" id="bottle">
+                <img src="bottle1.png"  style="transform: rotate(-35deg); width:55px; height:42px;">
+                <div class="popuptext1" id="myPopup1">
+                    <img src="mb.png" style="width: 80px; height: 120px; float: left;" >
+                    राञीबारा वाजताचा फोटो👆<br>
+                    पहिल्यापासून लाईमलाईट मधे रहायला आवडते माझ्या "मन"ला❤️..
+                    
+                  </div>
+            </div>
+            <div class="map" onclick="myFunction2()" id="map">
+                <img src="map.png" width="70px" height="70px" style="transform: rotate(3deg);">
+                <div class="popuptext2" id="myPopup2">
+                    <img src="shrida.png" style="width: 100px; height: 120px; float: left;">
+                    Happy Birthday to you!<br>
+                     Happy Birthday to you! <br>
+                     You look like a monkey and<br>
+                      you belong in a zoo! <br>
+                      There ya go,<br>
+                      but anyway i'll guide you🤣😝❤️..<br>
+                      happy bday kshipree..
+                    
+                  </div>
+            </div>
+            <div class="chest" onclick="myFunction3()" id="chest">
+                <img src="chest.png" width="100px" height="80px" style="transform: rotate(4deg);">
+                <div class="popuptext3" id="myPopup3">
+                    <img src="mm.png" style="width: 100px; height: 120px; float: left;">
+                    प्रिय क्षिप्रा , <br> वाढदिवसाच्या हार्दिक शुभेच्छा. हा...हा..हा .<br> ढमी नुसत हसती.<br>
+                    अशीच हसत रहा. पून्हा एकदा Happy birthday .🎂🍰💐🎊🎉🥳
+                    
+                  </div>
+            </div>
+            <div class="rope" onclick="myFunction4()" id="rope">
+                <img src="https://www.freeiconspng.com/uploads/rope-cord-sisal-string-material-png-24.png" width="190" height="170px">
+                <div class="popuptext4" id="myPopup4">
+                    <img src="rb.png" style="width: 100px; height: 100px; float: left;">
+                    या मौल्यवान दिवशी तुझी सर्व स्वप्ने पूर्ण होऊ दे,<br>
+                    तुझ्या यशाला सीमा न राहू दे आणि तुझ्या आयुष्यात सुखाचा वर्षाव होऊ दे.<br>
+                    वाढदिवसाच्या हार्दिक शुभेच्छा😃☺️<br>
+                         -rajoo mavshi
+                    
+                  </div>
+            </div>
+        </div>
+        <script>
+            // When the user clicks on div, open the popup
+            function myFunction() {
+              var popup = document.getElementById("myPopup");
+              popup.classList.toggle("show");
+            }
+            function myFunction1() {
+              var bottle = document.getElementById("myPopup1");
+              bottle.classList.toggle("show");
+            }
+            function myFunction2() {
+              var map = document.getElementById("myPopup2");
+              map.classList.toggle("show");
+            }
+            function myFunction4() {
+              var rope = document.getElementById("myPopup4");
+              rope.classList.toggle("show");
+            }
+            function myFunction3() {
+              var chest = document.getElementById("myPopup3");
+              chest.classList.toggle("show");
+            }
+            
+            </script>
+    </body>
+</html>

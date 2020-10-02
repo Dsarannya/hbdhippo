@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hey Hippo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style1.css">
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <h1>Welcome TO Dreamland Hippo!</h1>
+        <div class="popup" onclick="myFunction()">Hinto
+            <span class="popuptext" id="myPopup">
+                <li>Flying for the first time can be scary...<br></li>
+                <li>The mountains are calling..<br></li>
+                <li>can you tell me where I might find Platform 9 and 3 quarters?<br></li>
+                <li>Under a black flag we sail and the sea shall be our empire..<br></li>
+                <li>Not all who wonder are lost...</li>
+                
+            </span>
+       
+        </div>
+        
+        <div class="all" id="all">
+            
+        <div id="plane" class="plane">
+             <a href="plane.html" target="_blank"><img src="https://www.dl.dropboxusercontent.com/s/5beukq1zg37jlr7/airbus.png"></a>
+        </div>
+        
+        <div id="mountain" class="mountain">
+            <a href="trek.html" target="_blank"><img src="moun.png" width="1560px" height="400px" ></a>
+        </div>
+        <div class="bg">
+            <img src="bri.png" width="1557px" height="450px">
+        </div>
+        <div class="sea">
+            <img src="sea.png" width="1557px" height="700px">       
+        </div>
+        <div id="cruise">
+            <a href="ship.html" target="_blank"><img src="cruise.png" width="400px" height="200px"></a>
+        </div>
+        
+        <div id="train" class="train">
+            
+           <a href="hogw.html" target="_blank"><img src="train.png" width="400px" height="80px"></a>
+        
+        </div>
+        <div id="island">
+            <a href="island.html" target="_blank"><img src="is.png" width="300px" height="100px"></a>
+        </div>
+        
+    </div> 
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+        </script>
+        
+    </body>
+</html>
